@@ -1,0 +1,44 @@
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<hr />
+<p>layout: post
+title: Preparing for version 14.1
+date:   2019-06-18 16:16:01 -0600
+category: news
+—</p>
+
+<p>Hey all!  We’re preparing for Mahout version 14.1.</p>
+
+<p>This release might not seem super exciting from a user perspective (except 
+we’re bumping Apache Spark to version 2.x and Scala to version 2.11) but
+it includes some very important ‘behind the scenes changes’.  We’re doing a 
+heavy refactoring which will combine <code class="highlighter-rouge">math</code> and <code class="highlighter-rouge">math-scala</code> into a module 
+called <code class="highlighter-rouge">core</code> (no change to code required!).</p>
+
+<p>We will be moving H2o and Flink-batch engines into <code class="highlighter-rouge">community</code> that is to 
+say the code will still be available, but we won’t be actively maintaining 
+it (we will accept PRs though).  We’re moving the Map Reduce code to community
+and have considered to once again accepting PRs against this code (if you have
+an open PR, we’ll hit you up after the release about rebasing and considering to
+resubmit the PR)</p>
+
+<p>We’re going to be updating the Java dependency from 1.7 to 1.8.</p>
+
+<p>There was a LOT of old junk in the POMs which we have clipped out.</p>
+
+<p>Stay tuned and <a href="https://issues.apache.org/jira/secure/RapidBoard.jspa?rapidView=80&amp;projectKey=MAHOUT&amp;view=detail&amp;selectedIssue=MAHOUT-2047">feel free to help out</a>!</p>
+

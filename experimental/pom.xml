@@ -18,48 +18,24 @@
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.apache.mahout</groupId>
     <artifactId>mahout</artifactId>
-   <version>14.1-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
+    <version>14.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>experimental</artifactId>
-  <name>Mahout Experimental</name>
-  <description>Provided, and under work, be careful using in production.
-  </description>
-
   <packaging>pom</packaging>
 
-  <properties>
-  </properties>
+  <name>Mahout Experimental Solvers</name>
+  <description>Provided, and under work, be careful using in production.</description>
 
+  <modules>
+    <module>viennacl</module>
+    <module>viennacl-omp</module>
+  </modules>
 
-  <build>
-    <plugins>
-      <!-- ensure licenses -->
-      <plugin>
-        <groupId>org.apache.rat</groupId>
-        <artifactId>apache-rat-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
-
-  <profiles>
-    <profile>
-      <id>viennacl</id>
-      <modules>
-        <module>viennacl</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>viennacl-omp</id>
-      <modules>
-        <module>viennacl-omp</module>
-      </modules>
-    </profile>
-  </profiles>
 </project>

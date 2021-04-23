@@ -14,9 +14,9 @@
  limitations under the License.
 -->
 <assembly
-  xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0
+        xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0
   http://maven.apache.org/xsd/assembly-1.1.0.xsd">
   <id>dependency-reduced</id>
   <formats>
@@ -27,23 +27,23 @@
     <dependencySet>
       <unpack>true</unpack>
       <unpackOptions>
-      <!-- MAHOUT-1126 -->
-      <excludes>
-         <exclude>META-INF/LICENSE</exclude>
-      </excludes>
+        <!-- MAHOUT-1126 -->
+        <excludes>
+          <exclude>META-INF/LICENSE</exclude>
+        </excludes>
       </unpackOptions>
       <scope>runtime</scope>
-      <outputDirectory>/</outputDirectory>
+      <outputDirectory>./</outputDirectory>
       <useTransitiveFiltering>true</useTransitiveFiltering>
       <includes>
         <!-- guava only included to get Preconditions in mahout-math and mahout-hdfs -->
         <include>com.google.guava:guava</include>
-        <include>com.github.scopt_${scala.compat.version}</include>
-        <!--<include>com.tdunning:t-digest</include>-->
+        <include>com.github.scopt</include>
+<!--        <include>com.tdunning:t-digest</include>-->
         <include>org.apache.commons:commons-math3</include>
         <include>it.unimi.dsi:fastutil</include>
-        <include>org.apache.mahout:mahout-native-viennacl_${scala.compat.version}</include>
-        <include>org.apache.mahout:mahout-native-viennacl-omp_${scala.compat.version}</include>
+        <include>org.apache.mahout:mahout-native-viennacl_2.11</include>
+        <include>org.apache.mahout:mahout-native-viennacl-omp_2.11</include>
         <include>org.bytedeco:javacpp</include>
       </includes>
     </dependencySet>
